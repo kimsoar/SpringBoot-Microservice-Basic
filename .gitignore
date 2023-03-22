@@ -3,3 +3,4 @@ order-service/target
 inventory-service/target
 docker/data
 docker/db
+discovery-server/target

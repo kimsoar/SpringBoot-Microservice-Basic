@@ -1,0 +1,5 @@
+﻿product-service/target
+order-service/target
+inventory-service/target
+docker/data
+docker/db

@@ -1,0 +1,22 @@
+# compose 파일 버전, mongodb
+version: "3"
+services:
+  # 서비스 명
+  mongodb:
+    # 사용할 이미지
+    image: mongo:4.4.3
+    # 컨테이너 실행 시 재시작
+    # restart: always
+    # 컨테이너명 설정
+    container_name: mongodb
+    # 접근 포트 설정 (컨테이너 외부:컨테이너 내부)
+    ports:
+      - "27017:27017"
+    # 환경 변수 설정
+    environment:
+      # MongoDB 계정 및 패스워드 설정 옵션
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root123
+    # 볼륨 설정
+    volumes:
+      - ./data/mongodb:/data/db

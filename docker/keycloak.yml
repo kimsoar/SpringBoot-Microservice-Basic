@@ -1,0 +1,11 @@
+version: '3'
+# https://www.keycloak.org/getting-started/getting-started-docker
+# docker run -p 8181:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:18.0.0 start-dev
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:18.0.0
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - 8181:8080
